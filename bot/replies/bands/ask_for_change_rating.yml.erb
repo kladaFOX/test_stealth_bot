@@ -1,0 +1,13 @@
+<% if Rating.where(band: @band, owner_number: current_session.id).exists? %>
+  - reply_type: text
+    text: "Would you like to change your vote for <%= @band.title %>?"
+    suggestions:
+      - text: "Yes"
+      - text: "No"
+<% else %>
+  - reply_type: text
+    text: 'Would you like to add a vote for <%= @band.title %>?'
+    suggestions:
+      - text: "Yes"
+      - text: "No"
+<% end %>

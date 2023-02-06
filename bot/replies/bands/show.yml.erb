@@ -1,0 +1,9 @@
+<% if Rating.where(band: @band, owner_number: current_session.id).exists? %>
+  - reply_type: text
+    text: "ID: <%= @band.id %>; <%= @band.title %> - foundation year: <%= @band.foundation_year %>\nRating: <%= @band.score %>; Number of voters: <%= @band.ratings.count %>"
+  - reply_type: text
+    text: "Your vote was: <%= Rating.find_by(band: @band, owner_number: current_session.id).score %>"
+<% else %>
+  - reply_type: text
+    text: "ID: <%= @band.id %>; <%= @band.title %> - foundation year: <%= @band.foundation_year %>\nRating: <%= @band.score %>; Number of voters: <%= @band.ratings.count %>"
+<% end %>

@@ -1,0 +1,11 @@
+<% if @user_vote.present? %>
+  - reply_type: text
+    text: "Current <%= @band.title %> rating: <%= @band.score %>.\nYour vote was: <%= @user_vote.take.score %>"
+  - reply_type: text
+    text: "Please, reply with: 1, 2, 3, 4 or 5"
+<% else %>
+  - reply_type: text
+    text: "Current <%= @band.title %> rating: <%= @band.score %>."
+  - reply_type: text
+    text: "Please, reply with: 1, 2, 3, 4 or 5"
+<% end %>

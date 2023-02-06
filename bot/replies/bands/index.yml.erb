@@ -1,0 +1,4 @@
+<% @bands.each do |band| %>
+  - reply_type: text
+    text: "ID: <%= band.id %>; <%= band.title %> - foundation year: <%= band.foundation_year %>"
+<% end %>

@@ -19,7 +19,11 @@ class BandsSeeds
 
   def perform
     BANDS.each do |band|
-      Band.create!(title: band[:title], foundation_year: band[:foundation_year])
+      created_band = Band.create!(title: band[:title], foundation_year: band[:foundation_year])
+      rand(5..10).times do
+        created_band.ratings.create!(owner_number: Faker::PhoneNumber.cell_phone_in_e164, score: rand(3..5))
+      end
+
     end
   end
 end

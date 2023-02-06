@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'stealth', '~> 2.0.0beta7'
+gem 'stealth', '~> 2.0.0beta7'#, github: 'kladaFOX/stealth', branch: 'master'
 
 gem 'railties', '~> 6.0'
 gem 'activerecord', '~> 6.0'
@@ -14,6 +14,8 @@ gem 'sqlite3'
 gem 'stealth-twilio'
 
 group :development do
+  gem 'faker'
   gem 'foreman'
   gem 'listen', '~> 3.3'
+  gem 'pry'
 end

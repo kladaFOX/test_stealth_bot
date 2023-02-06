@@ -1,0 +1,6 @@
+- reply_type: text
+  text: '"Index" to see all bands.'
+  suggestions:
+    - text: "Index"
+- reply_type: text
+  text: 'Submit the ID of the group you want to see. E.g. "1"'
