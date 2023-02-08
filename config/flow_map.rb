@@ -9,6 +9,7 @@ class FlowMap
   flow :band do
     state :ask_action
     state :get_action, fails_to: :ask_action
+    state :show
     state :index
     state :ask_for_change_rating
     state :get_change_rating, fails_to: :ask_for_change_rating
